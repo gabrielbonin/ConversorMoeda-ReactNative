@@ -11,7 +11,7 @@ class Conversor extends Component{
   render(){
     return(
       <View style={styles.container}>
-        <Text style={styles.textTitulo}>USD to BRL</Text>
+        <Text style={styles.textTitulo}>{this.props.moedaA} to {this.props.moedaB}</Text>
         <TextInput
         placeholder="valor a ser convertido"
         style={styles.areaInput}
@@ -62,6 +62,12 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#FFF',
     fontWeight: 'bold'
+  },
+  valorConvertido: {
+    fontSize: 35,
+    fontWeight: 'bold',
+    color: '#000',
+    marginTop: 15
   }
  });
 export default Conversor;
